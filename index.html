@@ -1,125 +1,300 @@
-<!-- Curso Joyas Arcilla -->
-<article class="card">
-  <div class="card-media">
-    <img src="curso-joyas-arcilla.jpg" alt="Curso de Joyas con Arcilla Polimérica: Crea y Emprende">
-    <span class="badge">Manualidades</span>
-  </div>
-  <div class="card-body">
-    <h3 class="title">Curso de Joyas con Arcilla Polimérica: Crea y Emprende</h3>
-    <div class="meta">
-      <span class="chip">Diseño artesanal</span>
-      <span class="chip">Joyas únicas</span>
-    </div>
-    <div class="actions">
-      <a class="btn primary" target="_blank" href="https://www.udemy.com/course/curso-de-joyas-con-arcilla-polimerica-crea-y-emprende/?referralCode=9A34B90BCC64C9EF48C8">Ver curso</a>
-    </div>
-  </div>
-</article>
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GOUACADEMY – Cursos en Español</title>
+  <meta name="description" content="GOUACADEMY: cursos prácticos de Trading, Joyas/Alambrismo, IA y Diseño. Acceso inmediato." />
+  <meta name="robots" content="index, follow" />
 
-<!-- Curso Aretes Alambrismo -->
-<article class="card">
-  <div class="card-media">
-    <img src="curso-aretes-alambrismo.jpg" alt="Aretes y Anillos! Enamórate y Aprende Alambrismo">
-    <span class="badge">Joyas</span>
-  </div>
-  <div class="card-body">
-    <h3 class="title">Aretes y Anillos! Enamórate y Aprende Alambrismo</h3>
-    <div class="meta">
-      <span class="chip">Bisutería</span>
-      <span class="chip">Creatividad</span>
-    </div>
-    <div class="actions">
-      <a class="btn primary" target="_blank" href="https://www.udemy.com/course/aretes-que-enamoran-aprende-alambrismo-brillante-y-creativo/?referralCode=75D0A8FD10C5E0CF9DC8">Ver curso</a>
-    </div>
-  </div>
-</article>
+  <!-- Open Graph -->
+  <meta property="og:title" content="GOUACADEMY – Cursos en Español" />
+  <meta property="og:description" content="Cursos de Trading, Joyas, IA y Diseño. Acceso inmediato." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://TU-USUARIO.github.io/" />
+  <meta property="og:image" content="https://TU-USUARIO.github.io/curso-trading-master-pro.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
 
-<!-- Curso Wire Jewelry -->
-<article class="card">
-  <div class="card-media">
-    <img src="curso-wire-jewelry.jpg" alt="Wire Jewelry: Easy and Quick Pieces">
-    <span class="badge">DIY</span>
-  </div>
-  <div class="card-body">
-    <h3 class="title">Wire Jewelry: Easy and Quick Pieces</h3>
-    <div class="meta">
-      <span class="chip">Joyas en alambre</span>
-      <span class="chip">Proyectos rápidos</span>
-    </div>
-    <div class="actions">
-      <a class="btn primary" target="_blank" href="https://www.udemy.com/course/wire-jewelry-easy-and-quick-pieces/?referralCode=C338E1599F12DFB0E886">Ver curso</a>
-    </div>
-  </div>
-</article>
+  <style>
+    :root{
+      --bg:#0b1020; --panel:#0f172a; --card:#111827; --text:#e5e7eb; --muted:#a7b0c0;
+      --border:#1f2937; --brand:#22c55e; --ring:#34d39955;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:radial-gradient(1000px 700px at 10% -10%, #1b2540 0%, #0b1020 60%) fixed var(--bg);
+      color:var(--text); font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1180px;margin:0 auto;padding:28px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:8px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,#22c55e,#16a34a);box-shadow:0 10px 26px #16a34a66}
+    .brand h1{font-size:22px;margin:0}
+    nav a{opacity:.9;margin-left:16px}
+    .hero{margin:36px 0 20px}
+    .kicker{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#9ddbb3}
+    .hero h2{font-size:40px;line-height:1.1;margin:.2em 0 .35em}
+    .hero p{color:var(--muted);max-width:65ch;font-size:17px}
+    .cta{display:flex;gap:12px;margin-top:18px}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 16px;border-radius:12px;
+      border:1px solid var(--border);background:#0c142b; font-weight:600; transition:.2s}
+    .btn:hover{transform:translateY(-1px); box-shadow:0 8px 20px var(--ring)}
+    .btn.primary{background:linear-gradient(135deg,#22c55e,#16a34a)}
+    .section{margin:34px 0}
+    .section h3{font-size:26px;margin:0 0 12px}
+    .section p{color:var(--muted);margin:0 0 14px}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
+    .card{grid-column:span 12;background:linear-gradient(180deg,#121a32,#0d1327);
+      border:1px solid var(--border); border-radius:16px; overflow:hidden; box-shadow:0 10px 24px #0006; transition:.25s}
+    .card:hover{transform:translateY(-4px); box-shadow:0 18px 38px #0009}
+    .media{position:relative;aspect-ratio:16/9;background:#0b1220}
+    .media img{width:100%;height:100%;object-fit:cover; display:block}
+    .badge{position:absolute;top:10px;left:10px;background:#0b1228cc;border:1px solid #1c2b3a;
+      color:#cfeadb;border-radius:999px;padding:6px 10px;font-size:12px}
+    .body{padding:16px 16px 18px}
+    .title{font-size:18px;line-height:1.25;margin:0 0 10px;word-wrap:break-word}
+    .meta{display:flex;gap:10px;color:#c3cbd8;font-size:12px;flex-wrap:wrap;margin-bottom:12px}
+    .chip{border:1px solid var(--border);border-radius:999px;padding:6px 10px;background:#0b1222}
+    .actions{display:flex;gap:10px;flex-wrap:wrap}
+    footer{border-top:1px solid var(--border);padding:22px 0;color:#9aa6bb;font-size:13px;margin-top:34px}
+    @media(min-width:640px){ .card{grid-column:span 6} }
+    @media(min-width:980px){ .card{grid-column:span 4} .hero h2{font-size:48px} }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <h1>GOUACADEMY</h1>
+      </div>
+      <nav>
+        <a href="#trading">Trading</a>
+        <a href="#udemy">Cursos Udemy</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </header>
 
-<!-- Curso Bisutería en Alambre -->
-<article class="card">
-  <div class="card-media">
-    <img src="curso-bisuteria-alambre.jpg" alt="Bisutería en Alambre: Joyas Fáciles y Rápidas">
-    <span class="badge">Manualidades</span>
-  </div>
-  <div class="card-body">
-    <h3 class="title">Bisutería en Alambre: Joyas Fáciles y Rápidas</h3>
-    <div class="meta">
-      <span class="chip">Diseño rápido</span>
-      <span class="chip">Accesorios</span>
-    </div>
-    <div class="actions">
-      <a class="btn primary" target="_blank" href="https://www.udemy.com/course/bisuteria-en-alambre-joyas-faciles-y-rapidas/?referralCode=8F7FF11C27FA3ABAD9F8">Ver curso</a>
-    </div>
-  </div>
-</article>
+    <section class="hero">
+      <div class="kicker">Formación Online</div>
+      <h2>Aprende habilidades prácticas con GOUACADEMY</h2>
+      <p>Cursos en español con enfoque práctico: Trading, Joyas/Alambrismo, Inteligencia Artificial y Diseño. Acceso inmediato, actualizaciones y soporte.</p>
+      <div class="cta">
+        <a class="btn primary" href="#trading">Ver Trading</a>
+        <a class="btn" href="#udemy">Ver Udemy</a>
+      </div>
+    </section>
 
-<!-- Curso Gobernanza IA -->
-<article class="card">
-  <div class="card-media">
-    <img src="curso-gobernanza-ia.jpg" alt="Gobernanza de IA Generativa: Estrategia, Riesgos y Normas">
-    <span class="badge">IA</span>
-  </div>
-  <div class="card-body">
-    <h3 class="title">Gobernanza de IA Generativa: Estrategia, Riesgos y Normas</h3>
-    <div class="meta">
-      <span class="chip">Inteligencia Artificial</span>
-      <span class="chip">Compliance</span>
-    </div>
-    <div class="actions">
-      <a class="btn primary" target="_blank" href="https://www.udemy.com/course/gobernanza-de-ia-generativa-estrategia-riesgos-y-normas/?referralCode=19E144AE5A44090B984F">Ver curso</a>
-    </div>
-  </div>
-</article>
+    <!-- TRADING (GUMROAD) -->
+    <section id="trading" class="section">
+      <h3>Trading (Programas GOUACADEMY)</h3>
+      <p>Domina TradingView, MetaTrader, Price Action y estrategias profesionales.</p>
+      <div class="grid">
+        <!-- 1 -->
+        <article class="card">
+          <div class="media">
+            <img src="curso-tradingview-analisis-tecnico.jpg" alt="Curso de TradingView para análisis técnico e indicadores">
+            <span class="badge">Inicial–Intermedio</span>
+          </div>
+          <div class="body">
+            <h4 class="title">Curso de TradingView – Análisis Técnico, Indicadores y Configuración</h4>
+            <div class="meta">
+              <span class="chip">TradingView</span><span class="chip">Análisis Técnico</span><span class="chip">Práctico</span>
+            </div>
+            <div class="actions">
+              <a class="btn primary" target="_blank" href="https://cursademy.gumroad.com/l/TradingViewCursoEsencialParaTraders">Ver curso</a>
+            </div>
+          </div>
+        </article>
+        <!-- 2 -->
+        <article class="card">
+          <div class="media">
+            <img src="curso-trading-prime-elite.jpg" alt="Curso de Trading Prime Elite Profesional">
+            <span class="badge">Avanzado</span>
+          </div>
+          <div class="body">
+            <h4 class="title">Trading Prime Elite Profesional – FTMO, MetaTrader, Forex & Nasdaq</h4>
+            <div class="meta">
+              <span class="chip">Estrategias Pro</span><span class="chip">Prop Firms</span>
+            </div>
+            <div class="actions">
+              <a class="btn primary" target="_blank" href="https://cursademy.gumroad.com/l/PrimeEliteProfesional">Ver curso</a>
+            </div>
+          </div>
+        </article>
+        <!-- 3 -->
+        <article class="card">
+          <div class="media">
+            <img src="curso-velas-japonesas-precio.jpg" alt="Curso de Velas Japonesas y Acción del Precio">
+            <span class="badge">Fundamentos</span>
+          </div>
+          <div class="body">
+            <h4 class="title">Velas Japonesas y Acción del Precio – Estrategias profesionales</h4>
+            <div class="meta">
+              <span class="chip">Price Action</span><span class="chip">Patrones</span>
+            </div>
+            <div class="actions">
+              <a class="btn primary" target="_blank" href="https://cursademy.gumroad.com/l/velasjaponesas">Ver curso</a>
+            </div>
+          </div>
+        </article>
+        <!-- 4 -->
+        <article class="card">
+          <div class="media">
+            <img src="curso-trading-master-pro.jpg" alt="Curso de Trading Master Pro Académico">
+            <span class="badge">Programa integral</span>
+          </div>
+          <div class="body">
+            <h4 class="title">Trading Master Pro Académico – Forex, MetaTrader, TradingView y más</h4>
+            <div class="meta">
+              <span class="chip">Forex</span><span class="chip">Setups</span>
+            </div>
+            <div class="actions">
+              <a class="btn primary" target="_blank" href="https://cursademy.gumroad.com/l/uvmwl">Ver curso</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
 
-<!-- Curso AI Readiness -->
-<article class="card">
-  <div class="card-media">
-    <img src="curso-ai-readiness.jpg" alt="AI Readiness: Evalúa y Prepara tu Empresa para la IA">
-    <span class="badge">Transformación Digital</span>
-  </div>
-  <div class="card-body">
-    <h3 class="title">AI Readiness: Evalúa y Prepara tu Empresa para la IA</h3>
-    <div class="meta">
-      <span class="chip">Business AI</span>
-      <span class="chip">Preparación</span>
-    </div>
-    <div class="actions">
-      <a class="btn primary" target="_blank" href="https://www.udemy.com/course/ai-readiness-evalua-y-prepara-tu-empresa-para-la-ia/?referralCode=607B0CDD757AA17D7EB8">Ver curso</a>
-    </div>
-  </div>
-</article>
+    <!-- UDEMY -->
+    <section id="udemy" class="section">
+      <h3>Cursos Udemy (Joyas, IA y Diseño)</h3>
+      <p>Accede a nuestros cursos publicados en Udemy usando tus enlaces de referencia.</p>
+      <div class="grid">
+        <!-- Joyas Arcilla -->
+        <article class="card">
+          <div class="media">
+            <img src="curso-joyas-arcilla.jpg" alt="Curso de Joyas con Arcilla Polimérica: Crea y Emprende">
+            <span class="badge">Manualidades</span>
+          </div>
+          <div class="body">
+            <h4 class="title">Curso de Joyas con Arcilla Polimérica: Crea y Emprende</h4>
+            <div class="meta">
+              <span class="chip">Diseño artesanal</span><span class="chip">Emprendimiento</span>
+            </div>
+            <div class="actions">
+              <a class="btn primary" target="_blank" href="https://www.udemy.com/course/curso-de-joyas-con-arcilla-polimerica-crea-y-emprende/?referralCode=9A34B90BCC64C9EF48C8">Ver en Udemy</a>
+            </div>
+          </div>
+        </article>
+        <!-- Aretes Alambrismo -->
+        <article class="card">
+          <div class="media">
+            <img src="curso-aretes-alambrismo.jpg" alt="Aretes y Anillos! Enamórate y Aprende Alambrismo">
+            <span class="badge">Joyas</span>
+          </div>
+          <div class="body">
+            <h4 class="title">Aretes y Anillos! Enamórate y Aprende Alambrismo</h4>
+            <div class="meta">
+              <span class="chip">Bisutería</span><span class="chip">Creatividad</span>
+            </div>
+            <div class="actions">
+              <a class="btn primary" target="_blank" href="https://www.udemy.com/course/aretes-que-enamoran-aprende-alambrismo-brillante-y-creativo/?referralCode=75D0A8FD10C5E0CF9DC8">Ver en Udemy</a>
+            </div>
+          </div>
+        </article>
+        <!-- Wire Jewelry -->
+        <article class="card">
+          <div class="media">
+            <img src="curso-wire-jewelry.jpg" alt="Wire Jewelry: Easy and Quick Pieces">
+            <span class="badge">DIY</span>
+          </div>
+          <div class="body">
+            <h4 class="title">Wire Jewelry: Easy and Quick Pieces</h4>
+            <div class="meta">
+              <span class="chip">Alambre</span><span class="chip">Proyectos rápidos</span>
+            </div>
+            <div class="actions">
+              <a class="btn primary" target="_blank" href="https://www.udemy.com/course/wire-jewelry-easy-and-quick-pieces/?referralCode=C338E1599F12DFB0E886">Ver en Udemy</a>
+            </div>
+          </div>
+        </article>
+        <!-- Bisutería en Alambre -->
+        <article class="card">
+          <div class="media">
+            <img src="curso-bisuteria-alambre.jpg" alt="Bisutería en Alambre: Joyas Fáciles y Rápidas">
+            <span class="badge">Manualidades</span>
+          </div>
+          <div class="body">
+            <h4 class="title">Bisutería en Alambre: Joyas Fáciles y Rápidas</h4>
+            <div class="meta">
+              <span class="chip">Diseño rápido</span><span class="chip">Accesorios</span>
+            </div>
+            <div class="actions">
+              <a class="btn primary" target="_blank" href="https://www.udemy.com/course/bisuteria-en-alambre-joyas-faciles-y-rapidas/?referralCode=8F7FF11C27FA3ABAD9F8">Ver en Udemy</a>
+            </div>
+          </div>
+        </article>
+        <!-- Gobernanza IA -->
+        <article class="card">
+          <div class="media">
+            <img src="curso-gobernanza-ia.jpg" alt="Gobernanza de IA Generativa: Estrategia, Riesgos y Normas">
+            <span class="badge">IA</span>
+          </div>
+          <div class="body">
+            <h4 class="title">Gobernanza de IA Generativa: Estrategia, Riesgos y Normas</h4>
+            <div class="meta">
+              <span class="chip">Compliance</span><span class="chip">Estrategia</span>
+            </div>
+            <div class="actions">
+              <a class="btn primary" target="_blank" href="https://www.udemy.com/course/gobernanza-de-ia-generativa-estrategia-riesgos-y-normas/?referralCode=19E144AE5A44090B984F">Ver en Udemy</a>
+            </div>
+          </div>
+        </article>
+        <!-- AI Readiness -->
+        <article class="card">
+          <div class="media">
+            <img src="curso-ai-readiness.jpg" alt="AI Readiness: Evalúa y Prepara tu Empresa para la IA">
+            <span class="badge">Transformación</span>
+          </div>
+          <div class="body">
+            <h4 class="title">AI Readiness: Evalúa y Prepara tu Empresa para la IA</h4>
+            <div class="meta">
+              <span class="chip">Business AI</span><span class="chip">Preparación</span>
+            </div>
+            <div class="actions">
+              <a class="btn primary" target="_blank" href="https://www.udemy.com/course/ai-readiness-evalua-y-prepara-tu-empresa-para-la-ia/?referralCode=607B0CDD757AA17D7EB8">Ver en Udemy</a>
+            </div>
+          </div>
+        </article>
+        <!-- Diseño con IA -->
+        <article class="card">
+          <div class="media">
+            <img src="curso-diseno-grafico-ai.jpg" alt="Curso de Diseño Gráfico Profesional, IA y Negocios">
+            <span class="badge">Creatividad</span>
+          </div>
+          <div class="body">
+            <h4 class="title">Curso de Diseño Gráfico Profesional, IA y Negocios</h4>
+            <div class="meta">
+              <span class="chip">Diseño con IA</span><span class="chip">Marca & Negocio</span>
+            </div>
+            <div class="actions">
+              <a class="btn primary" target="_blank" href="https://www.udemy.com/course/curso-de-diseno-grafico-profesional-ai-y-negocios/?referralCode=E46A79CEF66FCFB35FA6">Ver en Udemy</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
 
-<!-- Curso Diseño Gráfico con IA -->
-<article class="card">
-  <div class="card-media">
-    <img src="curso-diseno-grafico-ai.jpg" alt="Curso de Diseño Gráfico Profesional, IA y Negocios">
-    <span class="badge">Creatividad</span>
+    <section id="contacto" class="section">
+      <h3>Contacto</h3>
+      <div class="grid">
+        <article class="card" style="grid-column:span 12">
+          <div class="body">
+            <p>¿Dudas o soporte? Escríbenos a <a href="mailto:goucademy@gmail.com">goucademy@gmail.com</a>.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container" style="padding:0;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
+        <span>© <span id="year"></span> GOUACADEMY. Todos los derechos reservados.</span>
+        <span><a href="#top">Volver arriba ↑</a></span>
+      </div>
+    </footer>
   </div>
-  <div class="card-body">
-    <h3 class="title">Curso de Diseño Gráfico Profesional, IA y Negocios</h3>
-    <div class="meta">
-      <span class="chip">Diseño con IA</span>
-      <span class="chip">Negocios Creativos</span>
-    </div>
-    <div class="actions">
-      <a class="btn primary" target="_blank" href="https://www.udemy.com/course/curso-de-diseno-grafico-profesional-ai-y-negocios/?referralCode=E46A79CEF66FCFB35FA6">Ver curso</a>
-    </div>
-  </div>
-</article>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
