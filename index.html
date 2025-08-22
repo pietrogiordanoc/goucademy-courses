@@ -1,31 +1,29 @@
-<!-- Lead Magnet (versión robusta con iframe directo) -->
+<!-- Lead Magnet (reemplaza tu sección actual) -->
 <section id="leadmagnet" class="section">
   <div class="lead-card">
     <h3>🎁 Recibe un curso gratis</h3>
     <p>Suscríbete y obtén acceso a un curso gratuito de GOUACADEMY. Además recibirás novedades y ofertas exclusivas.</p>
 
-    <div class="lead-embed" style="max-width:780px;margin:12px auto;">
-      <!-- IFRAME DIRECTO: sin script externo -->
-      <iframe
-        src="https://form.123formbuilder.com/6876592/goucademy-lead-capture"
-        title="Formulario de suscripción GOUACADEMY"
-        width="100%" height="900"
-        style="border:0; background:#0c1327; border-radius:12px;"
-        loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-        allow="clipboard-write *">
-      </iframe>
-
-      <!-- Fallback visible si el iframe es bloqueado por el navegador/AdBlock -->
-      <div style="text-align:center;margin-top:10px">
-        <a class="btn primary btn-wide"
+    <div class="lead-embed" id="fb-embed">
+      <!-- 1) Botón de fallback visible por defecto -->
+      <div id="fallbackWrap" style="text-align:center;margin:0 0 12px">
+        <a id="fallbackBtn" class="btn primary btn-wide"
            href="https://form.123formbuilder.com/6876592/goucademy-lead-capture"
            target="_blank" rel="noopener">
           Abrir formulario en una pestaña nueva
         </a>
+        <div id="status" style="color:#ffc9c9;font-size:14px;margin-top:8px;text-align:center">
+          Si no ves el formulario incrustado arriba, usa el botón para abrirlo.
+        </div>
       </div>
 
+      <!-- 2) Script del embed justo aquí dentro -->
+      <script src="https://form.123formbuilder.com/embed/6876592.js"
+              data-role="form" data-default-width="100%" async></script>
+
+      <!-- 3) Mensaje para usuarios sin JS -->
       <noscript>
-        <p style="text-align:center;color:#ffc9c9;margin-top:8px">
+        <p style="text-align:center;color:#ffc9c9">
           Activa JavaScript para ver el formulario embebido. Mientras tanto, usa
           <a href="https://form.123formbuilder.com/6876592/goucademy-lead-capture" target="_blank" rel="noopener">este enlace directo</a>.
         </p>
@@ -33,3 +31,22 @@
     </div>
   </div>
 </section>
+
+<script>
+  // Si el script crea un iframe, ocultamos el fallback automáticamente
+  (function(){
+    function hideFallbackIfLoaded(){
+      const wrap = document.getElementById('fb-embed');
+      const fallbackWrap = document.getElementById('fallbackWrap');
+      if (!wrap || !fallbackWrap) return;
+      const hasIframe = wrap.querySelector('iframe');
+      if (hasIframe) {
+        fallbackWrap.style.display = 'none';
+      }
+    }
+    // Revisar a los 800ms, 2s y 4s
+    setTimeout(hideFallbackIfLoaded, 800);
+    setTimeout(hideFallbackIfLoaded, 2000);
+    setTimeout(hideFallbackIfLoaded, 4000);
+  })();
+</script>
