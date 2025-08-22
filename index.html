@@ -1,52 +1,42 @@
-<!-- Lead Magnet (reemplaza tu sección actual) -->
+<!-- Lead Magnet con popup -->
 <section id="leadmagnet" class="section">
   <div class="lead-card">
     <h3>🎁 Recibe un curso gratis</h3>
     <p>Suscríbete y obtén acceso a un curso gratuito de GOUACADEMY. Además recibirás novedades y ofertas exclusivas.</p>
 
-    <div class="lead-embed" id="fb-embed">
-      <!-- 1) Botón de fallback visible por defecto -->
-      <div id="fallbackWrap" style="text-align:center;margin:0 0 12px">
-        <a id="fallbackBtn" class="btn primary btn-wide"
-           href="https://form.123formbuilder.com/6876592/goucademy-lead-capture"
-           target="_blank" rel="noopener">
-          Abrir formulario en una pestaña nueva
-        </a>
-        <div id="status" style="color:#ffc9c9;font-size:14px;margin-top:8px;text-align:center">
-          Si no ves el formulario incrustado arriba, usa el botón para abrirlo.
-        </div>
-      </div>
-
-      <!-- 2) Script del embed justo aquí dentro -->
-      <script src="https://form.123formbuilder.com/embed/6876592.js"
-              data-role="form" data-default-width="100%" async></script>
-
-      <!-- 3) Mensaje para usuarios sin JS -->
-      <noscript>
-        <p style="text-align:center;color:#ffc9c9">
-          Activa JavaScript para ver el formulario embebido. Mientras tanto, usa
-          <a href="https://form.123formbuilder.com/6876592/goucademy-lead-capture" target="_blank" rel="noopener">este enlace directo</a>.
-        </p>
-      </noscript>
+    <div style="text-align:center;margin-top:20px">
+      <button id="openFormBtn" class="btn primary btn-wide">Quiero mi curso gratis</button>
     </div>
   </div>
 </section>
 
+<!-- Modal oculto -->
+<div id="formModal" style="
+  display:none; position:fixed; inset:0;
+  background:rgba(0,0,0,.75); z-index:9999;
+  justify-content:center; align-items:center; padding:20px;">
+  
+  <div style="background:#0f172a; border-radius:12px; max-width:900px; width:100%; height:90%; display:flex; flex-direction:column;">
+    <div style="text-align:right; padding:10px;">
+      <button id="closeFormBtn" style="background:none; border:none; color:#fff; font-size:20px; cursor:pointer;">✖</button>
+    </div>
+    <iframe src="https://form.123formbuilder.com/6876592/goucademy-lead-capture"
+            style="flex:1; width:100%; border:none; border-radius:0 0 12px 12px;"
+            title="Formulario GOUACADEMY"></iframe>
+  </div>
+</div>
+
 <script>
-  // Si el script crea un iframe, ocultamos el fallback automáticamente
-  (function(){
-    function hideFallbackIfLoaded(){
-      const wrap = document.getElementById('fb-embed');
-      const fallbackWrap = document.getElementById('fallbackWrap');
-      if (!wrap || !fallbackWrap) return;
-      const hasIframe = wrap.querySelector('iframe');
-      if (hasIframe) {
-        fallbackWrap.style.display = 'none';
-      }
-    }
-    // Revisar a los 800ms, 2s y 4s
-    setTimeout(hideFallbackIfLoaded, 800);
-    setTimeout(hideFallbackIfLoaded, 2000);
-    setTimeout(hideFallbackIfLoaded, 4000);
-  })();
+  // Mostrar/ocultar modal
+  const modal = document.getElementById("formModal");
+  document.getElementById("openFormBtn").addEventListener("click", () => {
+    modal.style.display = "flex";
+  });
+  document.getElementById("closeFormBtn").addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+  // Cerrar al hacer click fuera del cuadro
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) modal.style.display = "none";
+  });
 </script>
