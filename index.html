@@ -1,70 +1,54 @@
-<!-- Header (título + CTA) -->
-<section class="hero" style="margin:36px 0 10px; text-align:center;">
-  <h1 style="margin:.2em 0 .2em; font-size:40px; line-height:1.1;">GOUACADEMY — Cursos Online</h1>
-  <p style="color:#a7b0c0; max-width:65ch; margin:0 auto 14px;">
-    Aprende Trading, DIY, Diseño e Inteligencia Artificial con cursos prácticos.
-  </p>
-
-  <!-- Botón que despliega el formulario en la misma página -->
-  <button id="toggleRegalo" class="btn primary"
-          style="padding:14px 22px; border-radius:14px; font-size:16px; margin-top:8px;">
+<!-- CTA: curso gratis (inline, sin popup) -->
+<div id="cta-regalo" style="margin-top:14px;">
+  <button id="btnRegalo" class="btn primary"
+          style="padding:14px 18px;border-radius:14px;font-size:15px">
     🎁 Quiero un curso gratis de regalo
   </button>
-</section>
 
-<!-- Bloque del formulario inline (oculto al cargar) -->
-<section id="regalo" class="section" aria-hidden="true"
-         style="max-width:900px; margin:0 auto 22px; overflow:hidden; transition:max-height .4s ease, opacity .25s ease; max-height:0; opacity:.0;">
-  <div class="lead-card" style="background:linear-gradient(180deg,#10182f,#0c1327); border:1px solid #1f2937; border-radius:16px; padding:20px;">
-    <h3 style="margin:0 0 6px; font-size:22px;">Suscríbete y recibe un curso gratis</h3>
-    <p style="margin:0 0 12px; color:#a7b0c0;">
-      Déjanos tu email y te enviaremos un curso de regalo y novedades exclusivas.
-    </p>
+  <!-- Panel con el formulario (oculto inicialmente) -->
+  <div id="panelRegalo"
+       style="max-width:900px;margin:14px 0 0;overflow:hidden;
+              border:1px solid #1f2937;border-radius:14px;background:#0c1327;
+              transition:max-height .35s ease, opacity .25s ease;
+              max-height:0; opacity:0;">
+    <iframe
+      src="https://form.123formbuilder.com/6876592/goucademy-lead-capture"
+      title="Formulario GOUACADEMY"
+      width="100%" height="900"
+      style="border:0;display:block;border-radius:14px"
+      loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+      allow="clipboard-write *"></iframe>
 
-    <!-- Iframe directo (sin scripts externos) -->
-    <div style="border-radius:12px; overflow:hidden;">
-      <iframe
-        src="https://form.123formbuilder.com/6876592/goucademy-lead-capture"
-        title="Formulario de suscripción GOUACADEMY"
-        width="100%" height="900" style="border:0; display:block; background:#0c1327;"
-        loading="lazy" referrerpolicy="no-referrer-when-downgrade" allow="clipboard-write *">
-      </iframe>
-    </div>
-
-    <!-- Enlace directo de respaldo -->
-    <div style="text-align:center; margin-top:10px;">
-      <a class="btn" href="https://form.123formbuilder.com/6876592/goucademy-lead-capture" target="_blank" rel="noopener"
-         style="display:inline-flex; padding:10px 14px; border-radius:10px;">
+    <!-- Enlace de respaldo si el iframe no carga -->
+    <div style="text-align:center;padding:10px 12px 16px">
+      <a class="btn" href="https://form.123formbuilder.com/6876592/goucademy-lead-capture"
+         target="_blank" rel="noopener"
+         style="display:inline-flex;padding:10px 14px;border-radius:10px">
         Abrir formulario en una pestaña nueva
       </a>
     </div>
   </div>
-</section>
+</div>
 
 <script>
-  // Despliegue/plegado suave del bloque "regalo" dentro de la página (sin popup)
-  (function(){
-    const btn = document.getElementById('toggleRegalo');
-    const panel = document.getElementById('regalo');
+  // Toggle suave del formulario dentro de la página
+  (function () {
+    const btn = document.getElementById('btnRegalo');
+    const panel = document.getElementById('panelRegalo');
     let open = false;
 
-    function setOpen(state){
+    function setOpen(state) {
       open = state;
-      panel.setAttribute('aria-hidden', String(!open));
-      if(open){
-        // calcular altura para animación
+      if (open) {
         panel.style.maxHeight = panel.scrollHeight + 'px';
         panel.style.opacity = '1';
-        // scroll suave para verlo
-        setTimeout(()=> panel.scrollIntoView({behavior:'smooth', block:'start'}), 50);
         btn.textContent = '✅ Ocultar formulario';
       } else {
         panel.style.maxHeight = '0';
-        panel.style.opacity = '.0';
+        panel.style.opacity = '0';
         btn.textContent = '🎁 Quiero un curso gratis de regalo';
       }
     }
-
-    btn.addEventListener('click', ()=> setOpen(!open));
+    btn.addEventListener('click', () => setOpen(!open));
   })();
 </script>
