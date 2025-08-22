@@ -1,248 +1,35 @@
-<!doctype html>
-<html lang="es">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>GOUACADEMY – Cursos Online</title>
-  <meta name="description" content="GOUACADEMY: cursos prácticos de Trading, Diseño y DIY. Acceso inmediato y soporte." />
-  <meta name="robots" content="index, follow" />
+<!-- Lead Magnet (versión robusta con iframe directo) -->
+<section id="leadmagnet" class="section">
+  <div class="lead-card">
+    <h3>🎁 Recibe un curso gratis</h3>
+    <p>Suscríbete y obtén acceso a un curso gratuito de GOUACADEMY. Además recibirás novedades y ofertas exclusivas.</p>
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="GOUACADEMY – Cursos Online" />
-  <meta property="og:description" content="Cursos de Trading, Diseño y DIY con enfoque práctico. Accede ahora." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://TU-USUARIO.github.io/" />
-  <meta property="og:image" content="https://TU-USUARIO.github.io/curso-trading-master-pro.jpg" />
-  <meta name="twitter:card" content="summary_large_image" />
+    <div class="lead-embed" style="max-width:780px;margin:12px auto;">
+      <!-- IFRAME DIRECTO: sin script externo -->
+      <iframe
+        src="https://form.123formbuilder.com/6876592/goucademy-lead-capture"
+        title="Formulario de suscripción GOUACADEMY"
+        width="100%" height="900"
+        style="border:0; background:#0c1327; border-radius:12px;"
+        loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        allow="clipboard-write *">
+      </iframe>
 
-  <style>
-    :root{
-      --bg:#0b1020; --panel:#0f172a; --card:#111827; --text:#e5e7eb; --muted:#a7b0c0;
-      --border:#1f2937; --brand:#22c55e; --ring:#34d39955;
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;background:radial-gradient(1000px 700px at 10% -10%, #1b2540 0%, #0b1020 60%) fixed var(--bg);
-      color:var(--text); font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif}
-    a{color:inherit;text-decoration:none}
-    .container{max-width:1180px;margin:0 auto;padding:28px}
-    header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:8px 0}
-    .brand{display:flex;align-items:center;gap:12px}
-    .logo{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,#22c55e,#16a34a);box-shadow:0 10px 26px #16a34a66}
-    .brand h1{font-size:22px;margin:0}
-    nav a{opacity:.9;margin-left:16px}
-    .hero{margin:36px 0 20px}
-    .kicker{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#9ddbb3}
-    .hero h2{font-size:40px;line-height:1.1;margin:.2em 0 .35em}
-    .hero p{color:var(--muted);max-width:65ch;font-size:17px}
-    .cta{display:flex;gap:12px;margin-top:18px}
-    .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 16px;border-radius:12px;
-      border:1px solid var(--border);background:#0c142b; font-weight:600; transition:.2s}
-    .btn:hover{transform:translateY(-1px); box-shadow:0 8px 20px var(--ring)}
-    .btn.primary{background:linear-gradient(135deg,#22c55e,#16a34a)}
-    .section{margin:34px 0}
-    .section h3{font-size:26px;margin:0 0 12px}
-    .section p{color:var(--muted);margin:0 0 14px}
-    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
-    .card{grid-column:span 12;background:linear-gradient(180deg,#121a32,#0d1327);
-      border:1px solid var(--border); border-radius:16px; overflow:hidden; box-shadow:0 10px 24px #0006; transition:.25s}
-    .card:hover{transform:translateY(-4px); box-shadow:0 18px 38px #0009}
-    .media{position:relative;aspect-ratio:16/9;background:#0b1220}
-    .media img{width:100%;height:100%;object-fit:cover; display:block}
-    .badge{position:absolute;top:10px;left:10px;background:#0b1228cc;border:1px solid #1c2b3a;
-      color:#cfeadb;border-radius:999px;padding:6px 10px;font-size:12px}
-    .body{padding:16px 16px 18px}
-    .title{font-size:18px;line-height:1.25;margin:0 0 10px;word-wrap:break-word}
-    .meta{display:flex;gap:10px;color:#c3cbd8;font-size:12px;flex-wrap:wrap;margin-bottom:12px}
-    .chip{border:1px solid var(--border);border-radius:999px;padding:6px 10px;background:#0b1222}
-    .actions{display:flex;gap:10px;flex-wrap:wrap}
-    footer{border-top:1px solid var(--border);padding:22px 0;color:#9aa6bb;font-size:13px;margin-top:34px}
-    @media(min-width:640px){ .card{grid-column:span 6} }
-    @media(min-width:980px){ .card{grid-column:span 4} .hero h2{font-size:48px} }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <header>
-      <div class="brand">
-        <div class="logo" aria-hidden="true"></div>
-        <h1>GOUACADEMY</h1>
+      <!-- Fallback visible si el iframe es bloqueado por el navegador/AdBlock -->
+      <div style="text-align:center;margin-top:10px">
+        <a class="btn primary btn-wide"
+           href="https://form.123formbuilder.com/6876592/goucademy-lead-capture"
+           target="_blank" rel="noopener">
+          Abrir formulario en una pestaña nueva
+        </a>
       </div>
-      <nav>
-        <a href="#trading">Trading</a>
-        <a href="#diy">DIY</a>
-        <a href="#diseno">Diseño</a>
-        <a href="#contacto">Contacto</a>
-      </nav>
-    </header>
 
-    <section class="hero">
-      <div class="kicker">Formación Online</div>
-      <h2>Aprende habilidades prácticas con GOUACADEMY</h2>
-      <p>Cursos en español con enfoque práctico: Trading, DIY y Diseño. Acceso inmediato, actualizaciones y soporte.</p>
-      <div class="cta">
-        <a class="btn primary" href="#trading">Ver Trading</a>
-        <a class="btn" href="#diy">Ver DIY</a>
-        <a class="btn" href="#diseno">Ver Diseño</a>
-      </div>
-    </section>
-
-    <!-- TRADING -->
-    <section id="trading" class="section">
-      <h3>Trading</h3>
-      <p>Domina TradingView, MetaTrader, Price Action y estrategias profesionales.</p>
-      <div class="grid">
-        <!-- Cursos trading -->
-        <article class="card">
-          <div class="media">
-            <img src="curso-tradingview-analisis-tecnico.jpg" alt="Curso de TradingView – Análisis Técnico e Indicadores">
-            <span class="badge">Inicial–Intermedio</span>
-          </div>
-          <div class="body">
-            <h4 class="title">TradingView – Análisis Técnico, Indicadores y Configuración</h4>
-            <div class="meta">
-              <span class="chip">TradingView</span><span class="chip">Análisis Técnico</span>
-            </div>
-            <div class="actions">
-              <a class="btn primary" target="_blank" href="https://cursademy.gumroad.com/l/TradingViewCursoEsencialParaTraders">Acceder</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="media">
-            <img src="curso-trading-prime-elite.jpg" alt="Trading Prime Elite Profesional – FTMO, MetaTrader, Forex & Nasdaq">
-            <span class="badge">Avanzado</span>
-          </div>
-          <div class="body">
-            <h4 class="title">Trading Prime Elite – FTMO, MetaTrader, Forex & Nasdaq</h4>
-            <div class="meta">
-              <span class="chip">Estrategias Pro</span><span class="chip">Prop Firms</span>
-            </div>
-            <div class="actions">
-              <a class="btn primary" target="_blank" href="https://cursademy.gumroad.com/l/PrimeEliteProfesional">Acceder</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="media">
-            <img src="curso-velas-japonesas-precio.jpg" alt="Curso de Velas Japonesas y Acción del Precio">
-            <span class="badge">Fundamentos</span>
-          </div>
-          <div class="body">
-            <h4 class="title">Velas Japonesas y Acción del Precio</h4>
-            <div class="meta">
-              <span class="chip">Price Action</span><span class="chip">Patrones</span>
-            </div>
-            <div class="actions">
-              <a class="btn primary" target="_blank" href="https://cursademy.gumroad.com/l/velasjaponesas">Acceder</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="media">
-            <img src="curso-trading-master-pro.jpg" alt="Curso Trading Master Pro Académico">
-            <span class="badge">Integral</span>
-          </div>
-          <div class="body">
-            <h4 class="title">Trading Master Pro Académico</h4>
-            <div class="meta">
-              <span class="chip">Forex</span><span class="chip">Setups</span>
-            </div>
-            <div class="actions">
-              <a class="btn primary" target="_blank" href="https://cursademy.gumroad.com/l/uvmwl">Acceder</a>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- DIY -->
-    <section id="diy" class="section">
-      <h3>DIY</h3>
-      <p>Aprende joyería, bisutería y manualidades creativas.</p>
-      <div class="grid">
-        <article class="card">
-          <div class="media"><img src="curso-joyas-arcilla.jpg" alt="Curso Joyas con Arcilla Polimérica"></div>
-          <div class="body">
-            <h4 class="title">Joyas con Arcilla Polimérica: Crea y Emprende</h4>
-            <div class="meta"><span class="chip">Manualidades</span></div>
-            <div class="actions"><a class="btn primary" target="_blank" href="https://www.udemy.com/course/curso-de-joyas-con-arcilla-polimerica-crea-y-emprende/?referralCode=9A34B90BCC64C9EF48C8">Acceder</a></div>
-          </div>
-        </article>
-        <article class="card">
-          <div class="media"><img src="curso-aretes-alambrismo.jpg" alt="Aretes y Anillos – Alambrismo"></div>
-          <div class="body">
-            <h4 class="title">Aretes y Anillos – Aprende Alambrismo</h4>
-            <div class="meta"><span class="chip">Bisutería</span></div>
-            <div class="actions"><a class="btn primary" target="_blank" href="https://www.udemy.com/course/aretes-que-enamoran-aprende-alambrismo-brillante-y-creativo/?referralCode=75D0A8FD10C5E0CF9DC8">Acceder</a></div>
-          </div>
-        </article>
-        <article class="card">
-          <div class="media"><img src="curso-wire-jewelry.jpg" alt="Wire Jewelry"></div>
-          <div class="body">
-            <h4 class="title">Wire Jewelry: Easy and Quick Pieces</h4>
-            <div class="meta"><span class="chip">DIY</span></div>
-            <div class="actions"><a class="btn primary" target="_blank" href="https://www.udemy.com/course/wire-jewelry-easy-and-quick-pieces/?referralCode=C338E1599F12DFB0E886">Acceder</a></div>
-          </div>
-        </article>
-        <article class="card">
-          <div class="media"><img src="curso-bisuteria-alambre.jpg" alt="Bisutería en Alambre"></div>
-          <div class="body">
-            <h4 class="title">Bisutería en Alambre: Joyas Fáciles y Rápidas</h4>
-            <div class="meta"><span class="chip">Manualidades</span></div>
-            <div class="actions"><a class="btn primary" target="_blank" href="https://www.udemy.com/course/bisuteria-en-alambre-joyas-faciles-y-rapidas/?referralCode=8F7FF11C27FA3ABAD9F8">Acceder</a></div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- DISEÑO -->
-    <section id="diseno" class="section">
-      <h3>Diseño</h3>
-      <p>Cursos de creatividad, inteligencia artificial y negocios.</p>
-      <div class="grid">
-        <article class="card">
-          <div class="media"><img src="curso-gobernanza-ia.jpg" alt="Gobernanza de IA Generativa"></div>
-          <div class="body">
-            <h4 class="title">Gobernanza de IA Generativa</h4>
-            <div class="meta"><span class="chip">IA</span></div>
-            <div class="actions"><a class="btn primary" target="_blank" href="https://www.udemy.com/course/gobernanza-de-ia-generativa-estrategia-riesgos-y-normas/?referralCode=19E144AE5A44090B984F">Acceder</a></div>
-          </div>
-        </article>
-        <article class="card">
-          <div class="media"><img src="curso-ai-readiness.jpg" alt="AI Readiness"></div>
-          <div class="body">
-            <h4 class="title">AI Readiness: Evalúa y Prepara tu Empresa</h4>
-            <div class="meta"><span class="chip">Transformación</span></div>
-            <div class="actions"><a class="btn primary" target="_blank" href="https://www.udemy.com/course/ai-readiness-evalua-y-prepara-tu-empresa-para-la-ia/?referralCode=607B0CDD757AA17D7EB8">Acceder</a></div>
-          </div>
-        </article>
-        <article class="card">
-          <div class="media"><img src="curso-diseno-grafico-ai.jpg" alt="Diseño Gráfico con IA"></div>
-          <div class="body">
-            <h4 class="title">Diseño Gráfico Profesional con IA y Negocios</h4>
-            <div class="meta"><span class="chip">Creatividad</span></div>
-            <div class="actions"><a class="btn primary" target="_blank" href="https://www.udemy.com/course/curso-de-diseno-grafico-profesional-ai-y-negocios/?referralCode=E46A79CEF66FCFB35FA6">Acceder</a></div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="contacto" class="section">
-      <h3>Contacto</h3>
-      <p>¿Dudas o soporte? Escríbenos a <a href="mailto:goucademy@gmail.com">goucademy@gmail.com</a>.</p>
-    </section>
-
-    <footer>
-      <div class="container" style="padding:0;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
-        <span>© <span id="year"></span> GOUACADEMY. Todos los derechos reservados.</span>
-        <span><a href="#top">Volver arriba ↑</a></span>
-      </div>
-    </footer>
+      <noscript>
+        <p style="text-align:center;color:#ffc9c9;margin-top:8px">
+          Activa JavaScript para ver el formulario embebido. Mientras tanto, usa
+          <a href="https://form.123formbuilder.com/6876592/goucademy-lead-capture" target="_blank" rel="noopener">este enlace directo</a>.
+        </p>
+      </noscript>
+    </div>
   </div>
-
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-</body>
-</html>
+</section>
